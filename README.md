@@ -9,3 +9,4 @@ The aim of this repo is to play around with Figma's [API](https://www.figma.com/
 
 ### [VUE CLI](https://cli.vuejs.org/)
 Used for quick front-end prototyping and set-up for the development enviroment.
+And as exuse to start getting to know VUE better.
