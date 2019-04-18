@@ -1,9 +1,13 @@
 import Vue from 'vue'
 import App from './App.vue'
 
+//VUE APP INITIATION
+
 new Vue({
   render: h => h(App),
 }).$mount('#app')
+
+//FIGMA API COUPLING
 
 const figmaApiKey = process.env.figmaApiKey
 
