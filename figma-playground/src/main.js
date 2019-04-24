@@ -9,6 +9,12 @@ new Vue({
 
 //FIGMA API COUPLING
 
+/*
+TODO: Add check for local / server
+TODO: Document CORS issue in MD
+TODO: Manage CORS fix via .ENV
+*/
+
 const figmaApiKey = process.env.figmaApiKey
 
 async function getThree(figmaId) {
