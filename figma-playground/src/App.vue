@@ -18,6 +18,7 @@ export default {
     this.callApi("06gofHh4ah2Hpd69FGccBXNO")
   },
   methods: {
+
     callApi: function(figmaId){
       axios({
         method: 'get', //you can set what request you want to be
@@ -29,7 +30,9 @@ export default {
         console.log(response.data.document)
       })
     }
+    
   }
+
 }
 
 </script>
