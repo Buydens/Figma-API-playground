@@ -1,21 +1,38 @@
 <template>
   <div id="app">
     <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <Base msg="Figma Playground base"/>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Base from './components/Base.vue'
+import axios from 'axios';
 
 export default {
   name: 'app',
   components: {
-    HelloWorld
+    Base
+  },
+    created:function(){
+    this.callApi("06gofHh4ah2Hpd69FGccBXNO")
+  },
+  methods: {
+    callApi: function(figmaId){
+      axios({
+        method: 'get', //you can set what request you want to be
+        url: 'https://api.figma.com/v1/files/' + figmaId,
+        headers: {
+          'X-Figma-Token': process.env.VUE_APP_figmaApiKey
+        }
+      }).then(response => {
+        console.log(response.data.document)
+      })
+    }
   }
 }
-</script>
 
+</script>
 <style>
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
