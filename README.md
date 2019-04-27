@@ -18,3 +18,6 @@ VUE_APP_figmaApiKey= 'here comes your unique API key from Figma'
 ### [VUE CLI](https://cli.vuejs.org/)
 Used for quick front-end prototyping and set-up for the development enviroment.
 And as exuse to start getting to know VUE better.
+
+### [Axios](https://github.com/axios/axios)
+Used for managing and preforming HTTP requests.
