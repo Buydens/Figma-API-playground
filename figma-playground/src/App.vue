@@ -7,31 +7,21 @@
 
 <script>
 import Base from './components/Base.vue'
-import axios from 'axios';
+import FigmaRouter from './logic/FigmaRouter';
 
 export default {
   name: 'app',
   components: {
     Base
   },
-    created:function(){
-    this.callApi("06gofHh4ah2Hpd69FGccBXNO")
+  created: function(){
+    this.callApi();
   },
   methods: {
-
-    callApi: function(figmaId){
-      axios({
-        method: 'get', //you can set what request you want to be
-        url: 'https://api.figma.com/v1/files/' + figmaId,
-        headers: {
-          'X-Figma-Token': process.env.VUE_APP_figmaApiKey
-        }
-      }).then(response => {
-        console.log(response.data.document)
-      })
+    callApi: async function(){
+      console.log(await FigmaRouter.getFile("06gofHh4ah2Hpd69FGccBXNO"));
     }
-    
-  }
+  }  
 
 }
 
