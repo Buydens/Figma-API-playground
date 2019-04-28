@@ -15,11 +15,21 @@ export default {
     Base
   },
   created: function(){
-    this.callApi();
+    this.getIds();
   },
   methods: {
-    callApi: async function(){
-      console.log(await FigmaRouter.getFile("06gofHh4ah2Hpd69FGccBXNO"));
+    getIds: async function(){
+      //let nodes = await FigmaRouter.getFile("06gofHh4ah2Hpd69FGccBXNO").document.children;
+      let FigmaFile = await FigmaRouter.getFile("06gofHh4ah2Hpd69FGccBXNO");
+      console.log(FigmaFile);
+      //let Canvasses = FigmaFile.document.children.filter(child => child.type == 'CANVAS');
+      
+      //let Frames = Canvasses[0].children.filter(child => child.type == 'FRAME')
+
+      let FigmaImage = await FigmaRouter.getImage("06gofHh4ah2Hpd69FGccBXNO");
+
+      console.log(FigmaImage);
+
     }
   }  
 
