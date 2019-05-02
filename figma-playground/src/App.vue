@@ -20,19 +20,27 @@ export default {
   methods: {
     getIds: async function(){
       //let nodes = await FigmaRouter.getFile("06gofHh4ah2Hpd69FGccBXNO").document.children;
-      let FigmaFile = await FigmaRouter.getFile("06gofHh4ah2Hpd69FGccBXNO");
-      console.log(FigmaFile);
+      //let FigmaFile = await FigmaRouter.getComponents("06gofHh4ah2Hpd69FGccBXNO");
+      //console.log(FigmaFile);
       //let Canvasses = FigmaFile.document.children.filter(child => child.type == 'CANVAS');
       
       //let Frames = Canvasses[0].children.filter(child => child.type == 'FRAME')
 
-      let FigmaImage = await FigmaRouter.getImage("06gofHh4ah2Hpd69FGccBXNO");
+      //let FigmaImage = await FigmaRouter.getComponents("06gofHh4ah2Hpd69FGccBXNO");
 
-      console.log(FigmaImage);
+      let figmaId = "06gofHh4ah2Hpd69FGccBXNO";
+
+      let result = await fetch('https://api.figma.com/v1/files/' + figmaId, {
+        method: 'GET',
+        headers: {
+          'X-Figma-Token': process.env.VUE_APP_figmaApiKey
+        }
+      });
+
+      console.log(await result.json())
 
     }
   }  
-
 }
 
 </script>
