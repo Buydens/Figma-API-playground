@@ -18,3 +18,6 @@ VUE_APP_figmaApiKey= 'here comes your unique API key from Figma'
 ### [VUE CLI](https://cli.vuejs.org/)
 Used for quick front-end prototyping and set-up for the development enviroment.
 And as exuse to start getting to know VUE better.
+
+#### [Figma-API-Toolbox](https://github.com/Buydens/Figma-API-Toolbox)
+A simple reusable router for connecting with the Figma API and managing objects from it.
